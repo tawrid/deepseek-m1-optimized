@@ -6,7 +6,7 @@
 
 This repository contains a fine-tuned version of the DeepSeek Coder model, optimized for Mac M1 and deployed on a Kubernetes cluster. The model is fine-tuned using QLoRA and trained with a Chain-of-Thought dataset for improved reasoning capabilities.
 
-
+![Screenshot](Screenshot_Container.png)
 
 ### 🚀 Features
 
@@ -141,11 +141,16 @@ curl -X POST http://<SERVICE_IP>:<PORT>/generate \
 ```
 📂 deepseek-finetuned
 ├── fine_tune_deepseek.py   # Fine-tuning script
-├── benchmark_deepseek.py            # Benchmarking script
+├── benchmark_deepseek.py   # Benchmarking script
 ├── Dockerfile              # Docker configuration
 ├── deepseek_deployment.yaml # Kubernetes deployment
 ├── deepseek_service.yaml   # Kubernetes service
-└── README.md               # This file
+├── 1_setup_deepseek.sh #Setup Ollama and other python dependencies
+├── 2_cot_tune_deepseek.sh # Generate chain of thought and fine tune the model for M1
+├── 3_install_k8s_build_deploy.sh #Setup K8S and build
+├── 4_build_deploy_k8s.sh #Publish to dockerhub
+├── 5_publish_deepseek.sh #Publish the model to Huggingface
+└── README.md               # This file 
 ```
 
 ### 🛠 Troubleshooting
