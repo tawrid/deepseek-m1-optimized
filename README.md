@@ -174,7 +174,8 @@ docker system prune -a
 
 • Clear unnecessary files:
 
-```rm -rf ~/Library/Caches/*
+```
+rm -rf ~/Library/Caches/*
 ```
 ### 🤖 Contributing
 
